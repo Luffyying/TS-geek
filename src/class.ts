@@ -46,3 +46,95 @@ let h = new Husky('sss','pink')
 //protected 如果给构造函数添加protecdte,则表示不能被实例化，能被继承，表示基类
 //readonly
 //static 只能够通过类名类调用，可被继承
+
+
+/*抽象类和多态 */
+// 抽象类只能被继承 无法创建一个实例
+abstract class Animal{
+    eat(){
+        console.log('eat');
+    }
+    abstract sleep():void
+}
+class Dog2 extends Animal{
+    constructor(name:string){
+        super()
+        this.name = name
+    }
+    name:string
+    sleep(){
+        console.log('dog sleep')
+    }
+}
+let d2 = new Dog2('www')
+d2.sleep()
+// let animal = new Animal()
+
+//多态  函数名称相同，？？？？
+class Cat extends Animal {
+    sleep(){
+        console.log('cat sleep')
+    }
+}
+let cat = new Cat()
+let animal:Animal[] = [d2,cat]
+animal.forEach(i => {
+    i.sleep()
+})
+class WorkFlow {
+    step1(){
+        return this;
+    }
+    step2(){
+        return this;
+    }
+}
+new WorkFlow().step1().step2()
+
+/*类实现接口（类和接口的关系） */
+interface Human {
+    name:string;
+    eat():void;
+    // new (name:string):void 构造函数
+}
+class Asian implements Human{
+    constructor(name:string){
+        this.name = name;
+    }
+    // private name:string
+    name:string
+    eat(){}
+    sleep(){}
+}
+// 类实现接口的时候，要完全实现接口的参数，可以允许超过接口的定义范围（类属性多余接口）
+//接口约束的范围:公有成员 和构造函数
+
+interface Dog3 extends Human{
+    run():void
+}
+interface Blue{
+    cry():void
+}
+//接口也可以继承接口
+interface Shidiqi extends Dog3,Blue{
+
+}
+let s :Shidiqi = {
+    name:'',
+    run(){},
+    eat(){},
+    cry(){}
+}
+
+class Auto{
+    state = 1
+    // private state2 = 0
+}
+//接口还可以继承类 抽象类的成员（私有、公有、受保护成员，没有方法）
+interface AutoInterface extends Auto{}
+class C implements AutoInterface{
+    state = 1
+}
+class Bus extends Auto implements AutoInterface{
+
+}
