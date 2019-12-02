@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1568118166845" clover="3.2.0">
+  <project timestamp="1568118166845" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="7" coveredelements="7" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="1.qs.js" path="/Users/didi/Desktop/Luffy/TS-geek/1.qs.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
