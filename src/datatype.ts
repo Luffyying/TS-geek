@@ -174,6 +174,7 @@ function getLib(){
     return lib;
 }
 let lib1 = getLib();
+console.log('-----lib1:',lib1);
 lib1();
 lib1.doSomething();
 let lib2 = getLib()

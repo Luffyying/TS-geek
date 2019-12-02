@@ -5,11 +5,12 @@ let a = 1
 let b = [1,null]
 let c = (x=1)=>x+1
 //从左侧向右侧推断
-window.onkeydown = (event) => {
-    console.log(event)
-}
+// window.onkeydown = (event) => {
+//     console.log(event)
+// }
 
-//类型断言 允许我们覆盖它原本的类型推断
+//类型断言 (keyword as )允许我们覆盖它原本的类型推断
+
 interface Foo {
     bar:number
 }
