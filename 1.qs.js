@@ -6,4 +6,4 @@ export const parser = str => {
     return obj;
   };
   // name=luffy&age=90&time=1993   -> {name:luffy,age:90,time:1993}
-  //have a test
+  //have a test23
